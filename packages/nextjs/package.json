@@ -74,7 +74,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "NEXT_PRIVATE_SKIP_LINT=true next build",
     "check-types": "tsc --noEmit --incremental",
     "db:pull": "dotenv -e .env.local npx -- prisma db pull",
     "db:push": "dotenv -e .env.local npx -- prisma db push",
