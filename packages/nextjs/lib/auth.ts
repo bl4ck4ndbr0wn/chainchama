@@ -38,7 +38,7 @@ export const authOptions: NextAuthOptions = {
       console.log("session", session);
       return session;
     },
-    async redirect({ url, baseUrl }) {
+    async redirect({ baseUrl }: { baseUrl: string }) {
       // Always redirect to the home page after sign-in
       return baseUrl;
     },
