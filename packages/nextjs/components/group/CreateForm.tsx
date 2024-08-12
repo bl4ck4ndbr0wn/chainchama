@@ -18,7 +18,7 @@ const formSchema = Yup.object().shape({
   name: Yup.string().required("Organization name is required"),
   description: Yup.string().required("Description is required"),
   groupType: Yup.string().required("Group Type is required"),
-  role: Yup.string().oneOf(["CHAIRPERSON", "MEMBER"], "Invalid role").required("Role is required"),
+  role: Yup.string().required("Role is required"),
 });
 
 type FormData = Yup.InferType<typeof formSchema>;

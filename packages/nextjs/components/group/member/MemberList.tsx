@@ -60,7 +60,7 @@ const MemberList = ({ organizationId }: { organizationId: string }) => {
 
 export default MemberList;
 
-function ChevronDownIcon(props) {
+function ChevronDownIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

@@ -1,8 +1,8 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import CryptoJS from "crypto-js";
 import SHA256 from "crypto-js/sha256";
-import { NextAuthOptions } from "next-auth";
 import { Adapter } from "next-auth/adapters";
+import type { NextAuthOptions } from "next-auth/react";
 import prisma from "~~/prisma/db";
 
 export const authOptions: NextAuthOptions = {

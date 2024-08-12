@@ -15,14 +15,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "~
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
   wallet: yup.string().required("Wallet address is required"),
-  role: yup.mixed<"CHAIRPERSON" | "MEMBER">().oneOf(["CHAIRPERSON", "MEMBER"]).required("Role is required"),
+  role: Yup.string().required("Role is required"),
 });
 
-type FormValues = {
-  name: string;
-  wallet: string;
-  role: "CHAIRPERSON" | "MEMBER";
-};
+type FormValues = Yup.InferType<typeof formSchema>;
 
 const MemberForm = ({ organizationId }: { organizationId: string }) => {
   const router = useRouter();
